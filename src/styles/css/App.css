@@ -1,0 +1,55 @@
+.ReactTags__tags {
+  margin-bottom: 30px; }
+  .ReactTags__tags .ReactTags__selected .ReactTags__tag {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 2px;
+    display: inline-block; }
+    .ReactTags__tags .ReactTags__selected .ReactTags__tag:last-child {
+      margin-right: 0; }
+    .ReactTags__tags .ReactTags__selected .ReactTags__tag .ReactTags__remove {
+      color: #aaa;
+      margin-left: 5px;
+      cursor: pointer; }
+  .ReactTags__tags .ReactTags__selected .ReactTags__tagInput {
+    width: 150px;
+    display: inline-block; }
+    .ReactTags__tags .ReactTags__selected .ReactTags__tagInput .ReactTags__tagInputField {
+      border: 1px solid #eee;
+      border-radius: 2px;
+      margin: 0;
+      height: 31px;
+      width: 100%;
+      padding: 0 10px;
+      font-family: helvetica;
+      font-size: 12px; }
+      .ReactTags__tags .ReactTags__selected .ReactTags__tagInput .ReactTags__tagInputField:focus {
+        outline: none;
+        outline-offset: 0; }
+
+.tags-output {
+  width: 100%;
+  border: 1px solid #ddd;
+  min-height: 100px;
+  white-space: pre-wrap;
+  padding: 6px 10px;
+  overflow-wrap: break-word;
+  border-radius: 2px; }
+
+@font-face (Futura, fonts/Futura);
+* {
+  box-sizing: border-box; }
+
+.app-container {
+  font-family: helvetica, Futura;
+  display: flex;
+  justify-content: center; }
+  .app-container .app {
+    margin-top: 50px;
+    padding: 0 15px;
+    font-size: 12px;
+    width: 100vw;
+    max-width: 500px; }

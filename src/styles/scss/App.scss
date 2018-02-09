@@ -1,0 +1,23 @@
+@import 'tags';
+@import 'tags_output';
+
+@font-face(Futura, fonts/Futura);
+
+* {
+  box-sizing: border-box;
+}
+
+.app-container {
+  font-family: helvetica, Futura;
+  display: flex;
+  justify-content: center;
+
+  .app {
+    margin-top: 50px;
+    padding: 0 15px;
+    font-size: 12px;
+    width: 100vw;
+    max-width: 500px;
+  }
+}
+

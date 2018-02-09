@@ -1,0 +1,46 @@
+.ReactTags__tags {
+  margin-bottom: 30px;
+
+  .ReactTags__selected {
+    .ReactTags__tag {
+      background-color: #eee;
+      border: 1px solid #ddd;
+      margin-right: 8px;
+      margin-bottom: 5px;
+      padding: 5px;
+      border-radius: 2px;
+      display: inline-block;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .ReactTags__remove {
+        color: #aaa;
+        margin-left: 5px;
+        cursor: pointer;
+      }
+    }
+
+    .ReactTags__tagInput {
+      width: 150px;
+      display: inline-block;
+
+      .ReactTags__tagInputField {
+        border: 1px solid #eee;
+        border-radius: 2px;
+        margin: 0;
+        height: 31px;
+        width: 100%;
+        padding: 0 10px;
+        font-family: helvetica;
+        font-size: 12px;
+
+        &:focus {
+          outline: none;
+          outline-offset: 0;
+        }
+      }
+    }
+  }
+}
