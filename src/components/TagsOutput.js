@@ -1,4 +1,5 @@
 import React from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const TagsOutput = ({ tags, total }) => {
   return (
@@ -7,6 +8,9 @@ const TagsOutput = ({ tags, total }) => {
       <div className='tags-output'>
         {tags}
       </div>
+      <CopyToClipboard text={tags}>
+        <button>Copy</button>
+      </CopyToClipboard>
     </div>
   );
 }
