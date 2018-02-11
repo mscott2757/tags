@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import TagsOutput from '../components/TagsOutput';
-import { formatTags } from '../actions';
+import { getTags } from '../selectors';
 
-const mapStateToProps = ({ tags }) => {
+const mapStateToProps = state => {
   return {
-    tags: formatTags(tags)
+    tags: getTags(state)
   }
 }
 

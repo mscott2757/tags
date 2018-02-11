@@ -1,6 +1,7 @@
 export const DELETE_TAG = 'DELETE_TAG';
 export const ADD_TAG = 'ADD_TAG';
 export const REORDER_TAG = 'REORDER_TAG';
+export const ADD_GROUP = 'ADD_GROUP';
 
 export const deleteTag = i => {
   return {
@@ -25,10 +26,10 @@ export const reorderTag = (tag, currPos, newPos) => {
   }
 }
 
-export const formatTags = (tags) => {
-  let output = '.\n'.repeat(5)  + tags.reduce((result, { text }) => {
-    return result + `#${text}`;
-  }, '');
-
-  return output;
+export const addGroup = (id, groupId) => {
+  return {
+    type: ADD_GROUP,
+    id,
+    groupId
+  }
 }

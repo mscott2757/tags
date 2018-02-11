@@ -39,6 +39,9 @@
   overflow-wrap: break-word;
   border-radius: 2px; }
 
+.tag-category .submit-disabled {
+  pointer-events: none; }
+
 @font-face (Futura, fonts/Futura);
 * {
   box-sizing: border-box; }

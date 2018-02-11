@@ -1,11 +1,27 @@
 import {
   ADD_TAG,
   DELETE_TAG,
-  REORDER_TAG
+  REORDER_TAG,
+  ADD_GROUP
 } from './actions';
 
+import {
+  defaultTags,
+  cameras,
+  films
+} from './content/Content';
+
 const initialState = {
-  tags: [{ id: 1, text: "thailand" }, { id: 2, text: "india" }],
+  tags: defaultTags.map((text, index) => {
+    return {
+      id: index + 1,
+      text
+    }
+  }),
+  tagCategories: {
+    cameras: cameras,
+    films: films
+  }
 }
 
 const Tags = (state = initialState, action) => {
@@ -17,6 +33,7 @@ const Tags = (state = initialState, action) => {
         return state;
       }
       return {
+        ...state,
         tags: [
           ...tags,
           {
@@ -27,6 +44,7 @@ const Tags = (state = initialState, action) => {
       }
     case DELETE_TAG:
       return {
+        ...state,
         tags: tags.filter((tag, i) => i !== action.i)
       }
     case REORDER_TAG:
@@ -35,7 +53,30 @@ const Tags = (state = initialState, action) => {
       newTags.splice(currPos, 1);
       newTags.splice(newPos, 0, tag);
       return {
+        ...state,
         tags: newTags
+      }
+    case ADD_GROUP:
+      let { id, groupId } = action;
+      let category = state.tagCategories[id];
+      console.log(category);
+      console.log(groupId);
+      let selectedGroup = category.options.find((group) => {
+        return group.id === groupId;
+      });
+      console.log(selectedGroup);
+
+      return {
+        ...state,
+        tags: [
+          ...tags,
+          ...selectedGroup.tags.map(( text, index) => {
+            return {
+              id: tags.length + 1 + index,
+              text
+            }
+          })
+        ]
       }
     default:
       return state;
