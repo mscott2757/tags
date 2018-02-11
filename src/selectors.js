@@ -1,4 +1,3 @@
-
 export const getCategoryGroups = (state, id) => {
   let category = state.tagCategories[id];
   let groups = category.groups.map(({ id, title }) => {

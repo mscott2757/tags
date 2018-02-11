@@ -34,6 +34,27 @@ export const cameras = {
   ]
 }
 
+export const locations = {
+  title: 'Locations',
+  groups: [
+    {
+      title: 'Tokyo',
+      id: 'tokyo',
+      tags: ['tokyo', 'unknownjapan', 'explorejapan', 'japan']
+    },
+    {
+      title: 'Osaka',
+      id: 'osaka',
+      tags: ['osaka', 'unknownjapan', 'explorejapan', 'japan']
+    },
+    {
+      title: 'Kyoto',
+      id: 'kyoto',
+      tags: ['kyoto', 'unknownjapan', 'explorejapan', 'japan']
+    }
+  ]
+}
+
 export const films = {
   title: 'Films',
   groups: [

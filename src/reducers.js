@@ -8,7 +8,8 @@ import {
 import {
   defaultTags,
   cameras,
-  films
+  films,
+  locations
 } from './content/Content';
 
 const initialState = {
@@ -19,8 +20,9 @@ const initialState = {
     }
   }),
   tagCategories: {
-    cameras: cameras,
-    films: films
+    cameras,
+    films,
+    locations
   }
 }
 
@@ -59,12 +61,9 @@ const Tags = (state = initialState, action) => {
     case ADD_GROUP:
       let { id, groupId } = action;
       let category = state.tagCategories[id];
-      console.log(category);
-      console.log(groupId);
       let selectedGroup = category.groups.find((group) => {
         return group.id === groupId;
       });
-      console.log(selectedGroup);
 
       return {
         ...state,
