@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import TagCategory from '../components/TagCategory';
 import { addGroup } from '../actions';
-import { getCategoryTitle, getCategoryOptions } from '../selectors';
+import { getCategoryTitle, getCategoryGroups } from '../selectors';
 
 const mapStateToProps = (state, { id }) => {
   return {
-    options: getCategoryOptions(state, id),
+    groups: getCategoryGroups(state, id),
     title: getCategoryTitle(state, id)
   }
 }

@@ -8,8 +8,10 @@ const App = () => {
   return (
     <div className='app-container'>
       <div className='app'>
-        <TagCategoryContainer id='cameras' />
-        <TagCategoryContainer id='films' />
+        <div className='tag-categories'>
+          <TagCategoryContainer id='cameras' />
+          <TagCategoryContainer id='films' />
+        </div>
         <TagsContainer />
         <TagsOutputContainer />
       </div>

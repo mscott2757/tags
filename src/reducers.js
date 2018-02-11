@@ -61,7 +61,7 @@ const Tags = (state = initialState, action) => {
       let category = state.tagCategories[id];
       console.log(category);
       console.log(groupId);
-      let selectedGroup = category.options.find((group) => {
+      let selectedGroup = category.groups.find((group) => {
         return group.id === groupId;
       });
       console.log(selectedGroup);

@@ -30,17 +30,21 @@
         outline: none;
         outline-offset: 0; }
 
-.tags-output {
-  width: 100%;
-  border: 1px solid #ddd;
-  min-height: 100px;
-  white-space: pre-wrap;
-  padding: 6px 10px;
-  overflow-wrap: break-word;
-  border-radius: 2px; }
+.tags-output-container {
+  width: 100%; }
+  .tags-output-container .tags-output {
+    width: 100%;
+    border: 1px solid #ddd;
+    min-height: 100px;
+    white-space: pre-wrap;
+    padding: 6px 10px;
+    overflow-wrap: break-word;
+    border-radius: 2px; }
 
-.tag-category .submit-disabled {
-  pointer-events: none; }
+.tag-categories {
+  margin-bottom: 30px; }
+  .tag-categories .tag-category .submit-disabled {
+    pointer-events: none; }
 
 @font-face (Futura, fonts/Futura);
 * {

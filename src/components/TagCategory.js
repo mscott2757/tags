@@ -19,7 +19,7 @@ class TagCategory extends Component {
   }
 
   render() {
-    const { options } = this.props;
+    const { groups } = this.props;
     return (
       <div className='tag-category'>
         <p>{this.props.title}</p>
@@ -29,7 +29,7 @@ class TagCategory extends Component {
             onChange={this.handleChange}
           >
             <option value='0' disabled>Select</option>
-            {options.map(({ id, title }, index) => {
+            {groups.map(({ id, title }, index) => {
               return (
                 <option
                   value={id}

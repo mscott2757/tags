@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 import TagsOutput from '../components/TagsOutput';
-import { getTags } from '../selectors';
+import { getTags, getTotal } from '../selectors';
 
 const mapStateToProps = state => {
   return {
-    tags: getTags(state)
+    tags: getTags(state),
+    total: getTotal(state)
   }
 }
 

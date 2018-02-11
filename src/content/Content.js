@@ -20,7 +20,7 @@ export const defaultTags = [
 
 export const cameras = {
   title: 'Cameras',
-  options: [
+  groups: [
     {
       title: 'Leica M2',
       id: 'm2',
@@ -36,7 +36,7 @@ export const cameras = {
 
 export const films = {
   title: 'Films',
-  options: [
+  groups: [
     {
       title: 'Kodak Portra 400',
       id: 'portra400',

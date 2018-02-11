@@ -1,10 +1,11 @@
-export const getCategoryOptions = (state, id) => {
+
+export const getCategoryGroups = (state, id) => {
   let category = state.tagCategories[id];
-  let options = category.options.map(({ id, title }) => {
+  let groups = category.groups.map(({ id, title }) => {
     return { id, title }
   });
 
-  return options;
+  return groups;
 }
 
 export const getCategoryTitle = (state, id) => {
@@ -17,4 +18,8 @@ export const getTags = ({ tags }) => {
   }, '');
 
   return output;
+}
+
+export const getTotal = ({ tags }) => {
+  return tags.length;
 }
