@@ -2,6 +2,8 @@ export const DELETE_TAG = 'DELETE_TAG';
 export const ADD_TAG = 'ADD_TAG';
 export const REORDER_TAG = 'REORDER_TAG';
 export const ADD_GROUP = 'ADD_GROUP';
+export const COPY_TAGS = 'COPY_TAGS';
+export const RESET_COPIED = 'RESET_COPIED';
 
 export const deleteTag = i => {
   return {
@@ -32,4 +34,15 @@ export const addGroup = (id, groupId) => {
     id,
     groupId
   }
+}
+
+export const copyTags = (copiedTimer) => {
+  return {
+    type: COPY_TAGS,
+    copiedTimer
+  }
+}
+
+export const resetCopied = () => {
+  return { type: RESET_COPIED }
 }

@@ -22,3 +22,11 @@ export const getTags = ({ tags }) => {
 export const getTotal = ({ tags }) => {
   return tags.length;
 }
+
+export const isCopied = ({copied}) => {
+  return copied;
+}
+
+export const isTooLong = ({ tags }) => {
+  return tags.length > 30;
+}

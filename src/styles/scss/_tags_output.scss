@@ -1,7 +1,7 @@
 .tags-output-container {
   width: 100%;
 
-  .tags-output {
+  .tags-output__display {
     width: 100%;
     border: 1px solid #ddd;
     min-height: 100px;
@@ -10,5 +10,18 @@
     overflow-wrap: break-word;
     border-radius: 2px;
     margin-bottom: 15px;
+  }
+
+  .tags-output__copy {
+    span {
+      color: #a8a8a8;
+      font-size: 12px;
+      align-self: center;
+      margin-right: 8px;
+    }
+
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
   }
 }

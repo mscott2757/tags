@@ -3,8 +3,42 @@
   margin-bottom: 30px;
 
   .tag-category {
-    .submit-disabled {
-      pointer-events: none;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .tag-category__form {
+      display: flex;
+      justify-content: space-between;
+
+      .tag-category__left {
+        display: flex;
+
+        .tag-category__title {
+           width: 70px;
+           margin-right: 10px;
+
+           p {
+             font-weight: bold;
+           }
+        }
+
+        .tag-category__select {
+          border: 1px solid #ddd;
+          border-radius: 2px;
+          font-size: 12px;
+          background: 0;
+          padding-left: 10px;
+          height: 31px;
+          width: 130px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
     }
   }
 }

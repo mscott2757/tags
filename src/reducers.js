@@ -2,7 +2,9 @@ import {
   ADD_TAG,
   DELETE_TAG,
   REORDER_TAG,
-  ADD_GROUP
+  ADD_GROUP,
+  COPY_TAGS,
+  RESET_COPIED
 } from './actions';
 
 import {
@@ -23,7 +25,9 @@ const initialState = {
     cameras,
     films,
     locations
-  }
+  },
+  copied: false,
+  copiedTimer: null
 }
 
 const Tags = (state = initialState, action) => {
@@ -76,6 +80,18 @@ const Tags = (state = initialState, action) => {
             }
           })
         ]
+      }
+    case COPY_TAGS:
+      clearTimeout(state.copiedTimer);
+      return {
+        ...state,
+        copied: true,
+        copiedTimer: action.copiedTimer
+      }
+    case RESET_COPIED:
+      return {
+        ...state,
+        copied: false
       }
     default:
       return state;
