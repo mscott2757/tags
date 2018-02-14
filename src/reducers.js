@@ -26,6 +26,11 @@ const initialState = {
     films,
     locations
   },
+  addedCategories: {
+    cameras: false,
+    films: false,
+    locations: false,
+  },
   copied: false,
   copiedTimer: null
 }
@@ -79,7 +84,11 @@ const Tags = (state = initialState, action) => {
               text
             }
           })
-        ]
+        ],
+        addedCategories: {
+          ...state.addedCategories,
+          [id]: true
+        }
       }
     case COPY_TAGS:
       clearTimeout(state.copiedTimer);

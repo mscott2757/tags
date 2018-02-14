@@ -19,6 +19,10 @@ export const getTags = ({ tags }) => {
   return output;
 }
 
+export const isAdded = ({ addedCategories }, id) => {
+  return addedCategories[id]
+}
+
 export const getTotal = ({ tags }) => {
   return tags.length;
 }

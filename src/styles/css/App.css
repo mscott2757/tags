@@ -45,11 +45,6 @@
     width: 100%;
     display: flex;
     justify-content: flex-end; }
-    .tags-output-container .tags-output__copy span {
-      color: #a8a8a8;
-      font-size: 12px;
-      align-self: center;
-      margin-right: 8px; }
 
 .tag-categories {
   margin-bottom: 30px; }
@@ -60,13 +55,18 @@
     .tag-categories .tag-category .tag-category__form {
       display: flex;
       justify-content: space-between; }
+      .tag-categories .tag-category .tag-category__form .tag-category__right {
+        display: flex; }
       .tag-categories .tag-category .tag-category__form .tag-category__left {
         display: flex; }
         .tag-categories .tag-category .tag-category__form .tag-category__left .tag-category__title {
           width: 70px;
-          margin-right: 10px; }
+          margin-right: 10px;
+          display: flex; }
           .tag-categories .tag-category .tag-category__form .tag-category__left .tag-category__title p {
-            font-weight: bold; }
+            font-weight: bold;
+            margin: 0;
+            align-self: center; }
         .tag-categories .tag-category .tag-category__form .tag-category__left .tag-category__select {
           border: 1px solid #ddd;
           border-radius: 2px;
@@ -74,7 +74,7 @@
           background: 0;
           padding-left: 10px;
           height: 31px;
-          width: 130px; }
+          width: 140px; }
           .tag-categories .tag-category .tag-category__form .tag-category__left .tag-category__select:focus {
             outline: none; }
 
@@ -87,11 +87,21 @@
   display: flex;
   justify-content: center; }
   .app-container .app {
-    margin-top: 50px;
-    padding: 0 15px;
+    padding: 15px;
     font-size: 12px;
     width: 100vw;
     max-width: 500px; }
+    .app-container .app .app-title {
+      margin-top: 10px;
+      margin-bottom: 40px; }
+      .app-container .app .app-title h3 {
+        margin: 0;
+        font-size: 2.4em; }
+    .app-container .app .alert-msg {
+      color: #a8a8a8;
+      font-size: 12px;
+      align-self: center;
+      margin-right: 8px; }
     .app-container .app .tag-btn {
       appearance: none;
       border-radius: 2px;

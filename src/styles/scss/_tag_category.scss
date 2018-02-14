@@ -13,15 +13,21 @@
       display: flex;
       justify-content: space-between;
 
+      .tag-category__right {
+        display: flex;
+      }
       .tag-category__left {
         display: flex;
 
         .tag-category__title {
            width: 70px;
            margin-right: 10px;
+           display: flex;
 
            p {
              font-weight: bold;
+             margin: 0;
+             align-self: center;
            }
         }
 
@@ -32,7 +38,7 @@
           background: 0;
           padding-left: 10px;
           height: 31px;
-          width: 130px;
+          width: 140px;
 
           &:focus {
             outline: none;

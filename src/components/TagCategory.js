@@ -19,7 +19,9 @@ class TagCategory extends Component {
   }
 
   render() {
-    const { groups } = this.props;
+    const { groups, added } = this.props;
+    let confirmation = added ? <span className='alert-msg'>done</span> : null;
+
     return (
       <div className='tag-category'>
         <form onSubmit={this.handleSubmit}>
@@ -46,11 +48,14 @@ class TagCategory extends Component {
                 })}
               </select>
             </div>
-            <input
-              className={'tag-btn ' + (this.state.groupId === '0' ? 'tag-btn--disabled' : '')}
-              type='submit'
-              value='Submit'
-            />
+            <div className='tag-category__right'>
+              {confirmation}
+              <input
+                className={'tag-btn ' + (this.state.groupId === '0' ? 'tag-btn--disabled' : '')}
+                type='submit'
+                value='Add'
+              />
+            </div>
           </div>
         </form>
       </div>

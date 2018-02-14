@@ -2,8 +2,8 @@ import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const TagsOutput = ({ copied, tooLong, tags, total, onCopy }) => {
-  let copyConfirmation = copied ? <span>copied</span> : null;
-  let tooLongWarning = tooLong ? <span>too many tags</span> : null;
+  let copyConfirmation = copied ? <span className='alert-msg'>copied</span> : null;
+  let tooLongWarning = tooLong ? <span className='alert-msg'>too many tags</span> : null;
 
   return (
     <div className='tags-output-container'>
