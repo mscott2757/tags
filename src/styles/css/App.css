@@ -49,7 +49,9 @@
 .tag-categories {
   margin-bottom: 30px; }
   .tag-categories .tag-category {
-    margin-bottom: 15px; }
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 25px; }
     .tag-categories .tag-category:last-child {
       margin-bottom: 0; }
     .tag-categories .tag-category .tag-category__form {
