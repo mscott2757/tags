@@ -78,6 +78,22 @@
           .tag-categories .tag-category .tag-category__form .tag-category__left .tag-category__select:focus {
             outline: none; }
 
+.tag-category-preview {
+  padding-left: 0;
+  margin-bottom: 0; }
+  .tag-category-preview--empty {
+    display: none; }
+  .tag-category-preview li {
+    list-style-type: none;
+    display: inline-block;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 2px;
+    margin-right: 5px; }
+    .tag-category-preview li:last-child {
+      margin-right: 0; }
+
 @font-face (Futura, fonts/Futura);
 * {
   box-sizing: border-box; }

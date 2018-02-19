@@ -4,14 +4,18 @@ import { addGroup } from '../actions';
 import {
   getCategoryTitle,
   getCategoryGroups,
-  isAdded
+  isAdded,
+  fetchPreview
 } from '../selectors';
 
 const mapStateToProps = (state, { id }) => {
   return {
     groups: getCategoryGroups(state, id),
     title: getCategoryTitle(state, id),
-    added: isAdded(state, id)
+    added: isAdded(state, id),
+    onFetchPreview: (categoryId, groupId) => {
+      return fetchPreview(state, categoryId, groupId);
+    }
   }
 }
 

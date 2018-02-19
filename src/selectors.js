@@ -7,6 +7,15 @@ export const getCategoryGroups = (state, id) => {
   return groups;
 }
 
+export const fetchPreview = (state, id, groupId) => {
+  let category = state.tagCategories[id];
+  let selectedGroup = category.groups.find((group) => {
+    return group.id === groupId;
+  });
+
+  return selectedGroup ? selectedGroup.tags : [];
+}
+
 export const getCategoryTitle = (state, id) => {
   return state.tagCategories[id].title;
 }

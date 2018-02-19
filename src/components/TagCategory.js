@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import TagCategoryPreview from './TagCategoryPreview';
 
 class TagCategory extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      groupId: '0'
+      groupId: '0',
     }
   }
 
@@ -22,6 +23,7 @@ class TagCategory extends Component {
     const { groups, added } = this.props;
     let confirmation = added ? <span className='alert-msg'>done</span> : null;
 
+    let previewTags = this.props.onFetchPreview(this.props.id, this.state.groupId);
     return (
       <div className='tag-category'>
         <form onSubmit={this.handleSubmit}>
@@ -58,6 +60,7 @@ class TagCategory extends Component {
             </div>
           </div>
         </form>
+        <TagCategoryPreview tags={previewTags} />
       </div>
     );
   }
