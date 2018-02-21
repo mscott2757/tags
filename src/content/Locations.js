@@ -24,12 +24,12 @@ const locations = {
     {
       title: 'Los Angeles',
       id: 'la',
-      tags: ['losangeles', 'califronia']
+      tags: ['losangeles', 'california']
     },
     {
       title: 'Berkeley',
       id: 'berkeley',
-      tags: ['berkeley', 'berkeleypov', 'califronia']
+      tags: ['berkeley', 'berkeleypov', 'california']
     },
     {
       title: 'Taipei',

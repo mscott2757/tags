@@ -22,7 +22,7 @@ export const getCategoryTitle = (state, id) => {
 
 export const getTags = ({ tags }) => {
   let output = '.\n'.repeat(5)  + tags.reduce((result, { text }) => {
-    return result + `#${text}`;
+    return result + `#${text} `;
   }, '');
 
   return output;
