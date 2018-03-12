@@ -19,6 +19,7 @@ export const defaultTags = [
   'staybrokeshootfilm',
   'stayandwander',
   'magnumphotos',
-  'lensculture'
+  'lensculture',
+  'streetclassics'
 ];
 

@@ -1,20 +1,23 @@
+
+const portraTags = ['kodak', 'colorfilm', 'kodakportra', 'madewithkodak'];
+
 const films = {
   title: 'Films',
   groups: [
     {
       title: 'Kodak Portra 400',
       id: 'portra400',
-      tags: ['kodak', 'colorfilm', 'kodakportra', 'madewithkodak']
+      tags: portraTags
     },
     {
       title: 'Kodak Portra 160',
       id: 'portra160',
-      tags: ['kodak', 'colorfilm', 'kodakportra', 'madewithkodak']
+      tags: portraTags
     },
     {
       title: 'Kodak Portra 800',
       id: 'portra800',
-      tags: ['kodak', 'colorfilm', 'kodakportra', 'madewithkodak']
+      tags: portraTags
     },
     {
       title: 'Kodak Tri-X',
@@ -32,14 +35,19 @@ const films = {
       tags: ['ishootfujifilm', 'colorfilm', 'fuji160ns', 'fujifilm']
     },
     {
+      title: 'Fuji Natura 1600',
+      id: 'natura',
+      tags: ['ishootfujifilm', 'colorfilm', 'fujinatura', 'fujifilm']
+    },
+    {
       title: 'Fuji Provia 100F',
       id: 'provia',
       tags: ['ishootfujifilm', 'colorfilm', 'provia100f', 'fujifilm']
     },
     {
-      title: 'Fuji Natura 1600',
-      id: 'natura',
-      tags: ['ishootfujifilm', 'colorfilm', 'fujinatura', 'fujifilm']
+      title: 'Cinestill 800T',
+      id: 'cinestill800t',
+      tags: ['cinestill800t', 'colorfilm', 'cinestill', 'cinestill800']
     }
   ]
 }
