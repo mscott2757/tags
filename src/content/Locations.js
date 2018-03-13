@@ -19,7 +19,12 @@ const locations = {
     {
       title: 'San Francisco',
       id: 'sf',
-      tags: ['sanfrancisco', 'california']
+      tags: ['sanfrancisco', 'california', 'bayarea']
+    },
+    {
+      title: 'Oakland',
+      id: 'oak',
+      tags: ['oakland', 'california', 'bayarea']
     },
     {
       title: 'Los Angeles',
