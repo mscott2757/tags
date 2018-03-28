@@ -2,6 +2,31 @@ const locations = {
   title: 'Locations',
   groups: [
     {
+      title: 'San Francisco',
+      id: 'sf',
+      tags: ['sanfrancisco', 'california', 'bayarea']
+    },
+    {
+      title: 'Portland',
+      id: 'pdx',
+      tags: ['portland', 'pdx', 'oregon', 'pnw']
+    },
+    {
+      title: 'Oakland',
+      id: 'oak',
+      tags: ['oakland', 'california', 'bayarea']
+    },
+    {
+      title: 'Berkeley',
+      id: 'berkeley',
+      tags: ['berkeley', 'berkeleypov', 'california']
+    },
+    {
+      title: 'Los Angeles',
+      id: 'la',
+      tags: ['losangeles', 'california']
+    },
+    {
       title: 'Tokyo',
       id: 'tokyo',
       tags: ['tokyo', 'unknownjapan', 'explorejapan', 'japan']
@@ -15,26 +40,6 @@ const locations = {
       title: 'Kyoto',
       id: 'kyoto',
       tags: ['kyoto', 'unknownjapan', 'explorejapan', 'japan']
-    },
-    {
-      title: 'San Francisco',
-      id: 'sf',
-      tags: ['sanfrancisco', 'california', 'bayarea']
-    },
-    {
-      title: 'Oakland',
-      id: 'oak',
-      tags: ['oakland', 'california', 'bayarea']
-    },
-    {
-      title: 'Los Angeles',
-      id: 'la',
-      tags: ['losangeles', 'california']
-    },
-    {
-      title: 'Berkeley',
-      id: 'berkeley',
-      tags: ['berkeley', 'berkeleypov', 'california']
     },
     {
       title: 'Taipei',
