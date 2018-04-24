@@ -13,7 +13,8 @@ const App = () => {
         </div>
         <div className='tag-categories'>
           <TagCategoryContainer id='cameras' />
-          <TagCategoryContainer id='films' />
+          <TagCategoryContainer id='colorFilms' />
+          <TagCategoryContainer id='bwFilms' />
           <TagCategoryContainer id='locations' />
         </div>
         <TagsContainer />

@@ -2,18 +2,13 @@
 const portraTags = ['kodak', 'colorfilm', 'kodakportra', 'madewithkodak'];
 const fujiTags = ['ishootfujifilm', 'colorfilm', 'fujifilm'];
 
-const films = {
-  title: 'Films',
+export const colorFilms = {
+  title: 'Color Film',
   groups: [
     {
       title: 'Kodak Portra',
       id: 'portra',
       tags: portraTags
-    },
-    {
-      title: 'Kodak Tri-X',
-      id: 'trix',
-      tags: ['kodak', 'blackandwhite', 'kodaktrix', 'madewithkodak']
     },
     {
       title: 'Fuji 400H',
@@ -36,11 +31,6 @@ const films = {
       tags: [...fujiTags, 'fujiindustrial400']
     },
     {
-      title: 'Fuji Provia 100F',
-      id: 'provia',
-      tags: [...fujiTags, 'provia100f']
-    },
-    {
       title: 'Cinestill 800T',
       id: 'cinestill800t',
       tags: ['cinestill800t', 'colorfilm', 'cinestill', 'cinestill800']
@@ -48,4 +38,19 @@ const films = {
   ]
 }
 
-export default films;
+export const bwFilms = {
+  title: 'Black and White Film',
+  groups: [
+    {
+      title: 'Ilford HP5',
+      id: 'hp5',
+      tags: ['ilford', 'blackandwhite', 'ilfordhp5', 'ilfordphoto']
+    },
+    {
+      title: 'Kodak Tri-X',
+      id: 'trix',
+      tags: ['kodak', 'blackandwhite', 'kodaktrix', 'madewithkodak']
+    },
+  ]
+}
+

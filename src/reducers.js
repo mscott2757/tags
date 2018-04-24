@@ -4,14 +4,13 @@ import {
   REORDER_TAG,
   ADD_GROUP,
   COPY_TAGS,
-  RESET_COPIED
+  RESET_COPIED,
+  RESET_TAGS
 } from './actions';
 
 import {
   defaultTags,
-  cameras,
-  films,
-  locations
+  tagCategories,
 } from './content/Content';
 
 const initialState = {
@@ -21,16 +20,12 @@ const initialState = {
       text
     }
   }),
-  tagCategories: {
-    cameras,
-    films,
-    locations
-  },
-  addedCategories: {
-    cameras: false,
-    films: false,
-    locations: false,
-  },
+  tagCategories,
+  addedCategories: Object.keys(tagCategories).reduce((acc, category) => {
+    acc[category] = false;
+    console.log(acc);
+    return acc;
+  }, {}),
   copied: false,
   copiedTimer: null
 }
@@ -57,6 +52,11 @@ const Tags = (state = initialState, action) => {
       return {
         ...state,
         tags: tags.filter((tag, i) => i !== action.i)
+      }
+    case RESET_TAGS:
+      return {
+        ...state,
+        tags: defaultTags
       }
     case REORDER_TAG:
       let { tag, currPos, newPos } = action;
@@ -98,10 +98,7 @@ const Tags = (state = initialState, action) => {
         copiedTimer: action.copiedTimer
       }
     case RESET_COPIED:
-      return {
-        ...state,
-        copied: false
-      }
+      return { ...state, copied: false }
     default:
       return state;
   }

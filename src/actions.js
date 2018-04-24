@@ -4,6 +4,7 @@ export const REORDER_TAG = 'REORDER_TAG';
 export const ADD_GROUP = 'ADD_GROUP';
 export const COPY_TAGS = 'COPY_TAGS';
 export const RESET_COPIED = 'RESET_COPIED';
+export const RESET_TAGS = 'RESET_TAGS';
 
 export const deleteTag = i => {
   return {
@@ -26,6 +27,10 @@ export const reorderTag = (tag, currPos, newPos) => {
     currPos,
     newPos
   }
+}
+
+export const resetTags = () => {
+  return { type: RESET_TAGS }
 }
 
 export const addGroup = (id, groupId) => {

@@ -1,4 +1,8 @@
-export {default as films} from './Films';
+import { colorFilms, bwFilms } from './Films';
+import locations from './Locations';
+import cameras from './Cameras';
+
+export { colorFilms, bwFilms } from './Films';
 export {default as locations} from './Locations';
 export {default as cameras} from './Cameras';
 
@@ -22,4 +26,11 @@ export const defaultTags = [
   'lensculture',
   'streetclassics'
 ];
+
+export const tagCategories = {
+  cameras,
+  colorFilms,
+  bwFilms,
+  locations
+}
 
