@@ -126,7 +126,8 @@
       border: 1px solid #ddd;
       height: 31px;
       font-size: 12px;
-      cursor: pointer; }
+      cursor: pointer;
+      margin-right: 8px; }
       .app-container .app .tag-btn--disabled {
         pointer-events: none;
         opacity: 0.5; }
@@ -134,3 +135,5 @@
         background-color: #eee; }
       .app-container .app .tag-btn:focus {
         outline: none; }
+      .app-container .app .tag-btn:last-child {
+        margin-right: 0; }

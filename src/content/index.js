@@ -23,7 +23,7 @@ export const defaultTags = [
   'streetclassics'
 ];
 
-export const tagCategories = {
+export const categories = {
   cameras,
   colorFilms,
   bwFilms,

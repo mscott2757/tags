@@ -10,27 +10,25 @@ import {
 
 import {
   defaultTags,
-  tagCategories,
-} from './content/Content';
+  categories,
+} from './content/';
 
-const initialState = {
-  tags: defaultTags.map((text, index) => {
-    return {
-      id: index + 1,
-      text
-    }
-  }),
-  tagCategories,
-  addedCategories: Object.keys(tagCategories).reduce((acc, category) => {
-    acc[category] = false;
-    console.log(acc);
-    return acc;
-  }, {}),
-  copied: false,
-  copiedTimer: null
+const getInitialState = () => {
+  return {
+    tags: defaultTags.map((text, index) => {
+      return { id: index + 1, text }
+    }),
+    categories,
+    addedCategories: Object.keys(categories).reduce((acc, category) => {
+      acc[category] = false;
+      return acc;
+    }, {}),
+    copied: false,
+    copiedTimer: null
+  }
 }
 
-const Tags = (state = initialState, action) => {
+const Tags = (state = getInitialState(), action) => {
   let { tags } = state;
   switch (action.type) {
     case ADD_TAG:
@@ -54,10 +52,7 @@ const Tags = (state = initialState, action) => {
         tags: tags.filter((tag, i) => i !== action.i)
       }
     case RESET_TAGS:
-      return {
-        ...state,
-        tags: defaultTags
-      }
+      return getInitialState();
     case REORDER_TAG:
       let { tag, currPos, newPos } = action;
       let newTags = tags.slice();
@@ -69,7 +64,7 @@ const Tags = (state = initialState, action) => {
       }
     case ADD_GROUP:
       let { id, groupId } = action;
-      let category = state.tagCategories[id];
+      let category = state.categories[id];
       let selectedGroup = category.groups.find((group) => {
         return group.id === groupId;
       });

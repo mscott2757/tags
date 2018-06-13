@@ -1,7 +1,7 @@
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-const TagsOutput = ({ copied, tooLong, tags, total, onCopy }) => {
+const TagsOutput = ({ copied, tooLong, tags, total, onCopy, onReset }) => {
   let copyConfirmation = copied ? <span className='alert-msg'>copied</span> : null;
   let tooLongWarning = tooLong ? <span className='alert-msg'>too many tags</span> : null;
 
@@ -20,6 +20,7 @@ const TagsOutput = ({ copied, tooLong, tags, total, onCopy }) => {
         >
           <button className={'tag-btn ' + (tooLong ? 'tag-btn--disabled' : '')}>Copy</button>
         </CopyToClipboard>
+        <button onClick={onReset} className={'tag-btn'}>Reset</button>
       </div>
     </div>
   );

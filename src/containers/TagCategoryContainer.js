@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import TagCategory from '../components/TagCategory';
+import { TagCategory } from '../components/';
 import { addGroup } from '../actions';
 import {
   getCategoryTitle,

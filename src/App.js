@@ -1,8 +1,6 @@
 import React from 'react';
 import './styles/css/App.css';
-import TagsOutputContainer from './containers/TagsOutputContainer';
-import TagsContainer from './containers/TagsContainer';
-import TagCategoryContainer from './containers/TagCategoryContainer';
+import { TagCategoriesContainer, TagsOutputContainer, TagsContainer } from './containers/';
 
 const App = () => {
   return (
@@ -11,13 +9,7 @@ const App = () => {
         <div className='app-title'>
           <h3>Mason Chan</h3>
         </div>
-        <div className='tag-categories'>
-          <TagCategoryContainer id='cameras' />
-          <TagCategoryContainer id='colorFilms' />
-          <TagCategoryContainer id='bwFilms' />
-          <TagCategoryContainer id='america' />
-          <TagCategoryContainer id='asia' />
-        </div>
+        <TagCategoriesContainer />
         <TagsContainer />
         <TagsOutputContainer />
       </div>

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Tags from '../components/Tags';
+import { Tags } from '../components/';
 
 import {
   deleteTag,

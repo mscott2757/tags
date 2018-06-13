@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import TagsOutput from '../components/TagsOutput';
+import { TagsOutput } from '../components/';
 import { getTags, getTotal, isCopied, isTooLong } from '../selectors';
-import { copyTags, resetCopied } from '../actions';
+import { copyTags, resetCopied, resetTags } from '../actions';
 
 const mapStateToProps = state => {
   return {
@@ -19,6 +19,9 @@ const mapDispatchToProps = dispatch => {
         dispatch(resetCopied());
       }, 3000);
       dispatch(copyTags(timer));
+    },
+    onReset: () => {
+      dispatch(resetTags());
     }
   }
 }

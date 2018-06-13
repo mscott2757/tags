@@ -1,5 +1,10 @@
-export const getCategoryGroups = (state, id) => {
-  let category = state.tagCategories[id];
+
+export const getCategories = ({ categories }) => {
+  return Object.keys(categories);
+}
+
+export const getCategoryGroups = ({ categories }, id) => {
+  let category = categories[id];
   let groups = category.groups.map(({ id, title }) => {
     return { id, title }
   });
@@ -7,8 +12,8 @@ export const getCategoryGroups = (state, id) => {
   return groups;
 }
 
-export const fetchPreview = (state, id, groupId) => {
-  let category = state.tagCategories[id];
+export const fetchPreview = ({ categories }, id, groupId) => {
+  let category = categories[id];
   let selectedGroup = category.groups.find((group) => {
     return group.id === groupId;
   });
@@ -16,8 +21,8 @@ export const fetchPreview = (state, id, groupId) => {
   return selectedGroup ? selectedGroup.tags : [];
 }
 
-export const getCategoryTitle = (state, id) => {
-  return state.tagCategories[id].title;
+export const getCategoryTitle = ({ categories }, id) => {
+  return categories[id].title;
 }
 
 export const getTags = ({ tags }) => {
