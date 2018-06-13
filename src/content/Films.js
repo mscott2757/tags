@@ -39,7 +39,7 @@ export const colorFilms = {
 }
 
 export const bwFilms = {
-  title: 'Black and White Film',
+  title: 'BW Film',
   groups: [
     {
       title: 'Ilford HP5',

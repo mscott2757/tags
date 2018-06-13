@@ -15,7 +15,8 @@ const App = () => {
           <TagCategoryContainer id='cameras' />
           <TagCategoryContainer id='colorFilms' />
           <TagCategoryContainer id='bwFilms' />
-          <TagCategoryContainer id='locations' />
+          <TagCategoryContainer id='america' />
+          <TagCategoryContainer id='asia' />
         </div>
         <TagsContainer />
         <TagsOutputContainer />

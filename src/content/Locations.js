@@ -1,5 +1,6 @@
-const locations = {
-  title: 'Locations',
+
+export const america = {
+  title: 'America',
   groups: [
     {
       title: 'San Francisco',
@@ -26,6 +27,22 @@ const locations = {
       id: 'la',
       tags: ['losangeles', 'california']
     },
+    {
+      title: 'New York',
+      id: 'nyc',
+      tags: ['newyorkcity', 'manhattan', 'ny']
+    },
+    {
+      title: 'Chicago',
+      id: 'chicago',
+      tags: ['chicago', 'artofchi', 'illinois']
+    },
+  ]
+}
+
+export const asia = {
+  title: 'Asia',
+  groups: [
     {
       title: 'Tokyo',
       id: 'tokyo',
@@ -59,4 +76,3 @@ const locations = {
   ]
 }
 
-export default locations;

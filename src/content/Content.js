@@ -1,10 +1,6 @@
 import { colorFilms, bwFilms } from './Films';
-import locations from './Locations';
 import cameras from './Cameras';
-
-export { colorFilms, bwFilms } from './Films';
-export {default as locations} from './Locations';
-export {default as cameras} from './Cameras';
+import { america, asia } from './Locations';
 
 export const defaultTags = [
   'film',
@@ -31,6 +27,7 @@ export const tagCategories = {
   cameras,
   colorFilms,
   bwFilms,
-  locations
+  america,
+  asia
 }
 

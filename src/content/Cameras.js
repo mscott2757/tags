@@ -1,5 +1,5 @@
 const cameras = {
-  title: 'Cameras',
+  title: 'Camera',
   groups: [
     {
       title: 'Leica M2',
@@ -10,6 +10,11 @@ const cameras = {
       title: 'Pentax 67',
       id: 'p67',
       tags: ['pentax67', 'pentax', '120mm', 'mediumformat']
+    },
+    {
+      title: 'Nikon FM2',
+      id: 'fm2',
+      tags: ['nikonphotograpy', '35mm', '35mmfilm']
     }
   ]
 }
