@@ -1,78 +1,65 @@
 
 export const america = {
   title: 'America',
-  groups: [
-    {
+  groups: {
+    sf: {
       title: 'San Francisco',
-      id: 'sf',
       tags: ['sanfrancisco', 'california', 'bayarea']
     },
-    {
+    pdx: {
       title: 'Portland',
-      id: 'pdx',
       tags: ['portland', 'pdx', 'oregon', 'pnw']
     },
-    {
+    oak: {
       title: 'Oakland',
-      id: 'oak',
       tags: ['oakland', 'california', 'bayarea']
     },
-    {
+    berkeley: {
       title: 'Berkeley',
-      id: 'berkeley',
       tags: ['berkeley', 'berkeleypov', 'california']
     },
-    {
+    la: {
       title: 'Los Angeles',
-      id: 'la',
       tags: ['losangeles', 'california']
     },
-    {
+    nyc: {
       title: 'New York',
-      id: 'nyc',
       tags: ['newyorkcity', 'manhattan', 'ny']
     },
-    {
+    chicago: {
       title: 'Chicago',
-      id: 'chicago',
       tags: ['chicago', 'artofchi', 'illinois']
     },
-  ]
+  }
 }
 
 export const asia = {
   title: 'Asia',
-  groups: [
-    {
+  groups: {
+    tokyo: {
       title: 'Tokyo',
-      id: 'tokyo',
       tags: ['tokyo', 'unknownjapan', 'explorejapan', 'japan']
     },
-    {
+    osaka: {
       title: 'Osaka',
-      id: 'osaka',
       tags: ['osaka', 'unknownjapan', 'explorejapan', 'japan']
     },
-    {
+    kyoto: {
       title: 'Kyoto',
-      id: 'kyoto',
       tags: ['kyoto', 'unknownjapan', 'explorejapan', 'japan']
     },
-    {
+    taipei: {
       title: 'Taipei',
-      id: 'taipei',
       tags: ['taipei', 'taiwan']
     },
-    {
+    jiufen: {
       title: 'Jiufen',
-      id: 'jiufen',
       tags: ['oldstreet', 'taipei', 'jiufen', 'taiwan']
     },
-    {
+    tamsui: {
       title: 'Tamsui',
-      id: 'tamsui',
       tags: ['taipei', 'taiwan', 'tamsui']
     }
-  ]
+  }
 }
 

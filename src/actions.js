@@ -7,10 +7,7 @@ export const RESET_COPIED = 'RESET_COPIED';
 export const RESET_TAGS = 'RESET_TAGS';
 
 export const deleteTag = i => {
-  return {
-    type: DELETE_TAG,
-    i
-  }
+  return { type: DELETE_TAG, i };
 }
 
 export const addTag = text => {
@@ -42,12 +39,9 @@ export const addGroup = (id, groupId) => {
 }
 
 export const copyTags = (copiedTimer) => {
-  return {
-    type: COPY_TAGS,
-    copiedTimer
-  }
+  return { type: COPY_TAGS, copiedTimer };
 }
 
 export const resetCopied = () => {
-  return { type: RESET_COPIED }
+  return { type: RESET_COPIED };
 }

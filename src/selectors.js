@@ -1,50 +1,31 @@
 
-export const getCategories = ({ categories }) => {
-  return Object.keys(categories);
-}
+export const getCategories = ({ categories }) => Object.keys(categories);
 
 export const getCategoryGroups = ({ categories }, id) => {
   let category = categories[id];
-  let groups = category.groups.map(({ id, title }) => {
-    return { id, title }
+  return Object.keys(category.groups).map((id) => {
+    return { ...category.groups[id], id }
   });
-
-  return groups;
 }
 
 export const fetchPreview = ({ categories }, id, groupId) => {
   let category = categories[id];
-  let selectedGroup = category.groups.find((group) => {
-    return group.id === groupId;
-  });
-
+  let selectedGroup = category.groups[groupId];
   return selectedGroup ? selectedGroup.tags : [];
 }
 
-export const getCategoryTitle = ({ categories }, id) => {
-  return categories[id].title;
-}
+export const getCategoryTitle = ({ categories }, id) => categories[id].title;
 
 export const getTags = ({ tags }) => {
-  let output = '.\n'.repeat(5)  + tags.reduce((result, { text }) => {
+  return '.\n'.repeat(5)  + tags.reduce((result, { text }) => {
     return result + `#${text} `;
   }, '');
-
-  return output;
 }
 
-export const isAdded = ({ addedCategories }, id) => {
-  return addedCategories[id]
-}
+export const isAdded = ({ addedCategories }, id) => addedCategories[id];
 
-export const getTotal = ({ tags }) => {
-  return tags.length;
-}
+export const getTotal = ({ tags }) => tags.length;
 
-export const isCopied = ({copied}) => {
-  return copied;
-}
+export const isCopied = ({ copied }) => copied;
 
-export const isTooLong = ({ tags }) => {
-  return tags.length > 30;
-}
+export const isTooLong = ({ tags }) => tags.length > 30;

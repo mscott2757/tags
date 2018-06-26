@@ -28,56 +28,48 @@ const getInitialState = () => {
   }
 }
 
-const Tags = (state = getInitialState(), action) => {
-  let { tags } = state;
+const TagsReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_TAG:
       let { text } = action;
       if (!text) {
         return state;
       }
-      return {
-        ...state,
-        tags: [
-          ...tags,
-          {
-            id: tags.length + 1,
-            text
-          }
-        ]
-      }
+      return [ ...state, { id: state.length + 1, text } ];
     case DELETE_TAG:
-      return {
-        ...state,
-        tags: tags.filter((tag, i) => i !== action.i)
-      }
+      return state.filter((tag, i) => i !== action.i);
+    case REORDER_TAG:
+      let { tag, currPos, newPos } = action;
+      let newTags = state.slice();
+      newTags.splice(currPos, 1);
+      newTags.splice(newPos, 0, tag);
+      return newTags;
+    default:
+      return state;
+  }
+}
+
+const RootReducer = (state = getInitialState(), action) => {
+  let { tags } = state;
+  switch (action.type) {
+    case ADD_TAG:
+      return { ...state, tags: TagsReducer(tags, action) }
+    case DELETE_TAG:
+      return { ...state, tags: TagsReducer(tags, action) }
     case RESET_TAGS:
       return getInitialState();
     case REORDER_TAG:
-      let { tag, currPos, newPos } = action;
-      let newTags = tags.slice();
-      newTags.splice(currPos, 1);
-      newTags.splice(newPos, 0, tag);
-      return {
-        ...state,
-        tags: newTags
-      }
+      return { ...state, tags: TagsReducer(tags, action) }
     case ADD_GROUP:
       let { id, groupId } = action;
       let category = state.categories[id];
-      let selectedGroup = category.groups.find((group) => {
-        return group.id === groupId;
-      });
-
+      let selectedGroup = category.groups[groupId]
       return {
         ...state,
         tags: [
           ...tags,
-          ...selectedGroup.tags.map(( text, index) => {
-            return {
-              id: tags.length + 1 + index,
-              text
-            }
+          ...selectedGroup.tags.map((text, index) => {
+            return { id: tags.length + 1 + index, text }
           })
         ],
         addedCategories: {
@@ -99,4 +91,4 @@ const Tags = (state = getInitialState(), action) => {
   }
 }
 
-export default Tags;
+export default RootReducer;
