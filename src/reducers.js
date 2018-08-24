@@ -15,16 +15,14 @@ import {
 
 const getInitialState = () => {
   return {
-    tags: defaultTags.map((text, index) => {
-      return { id: index + 1, text }
-    }),
+    tags: defaultTags.map((text, index) => ({ id: index + 1, text })),
     categories,
     addedCategories: Object.keys(categories).reduce((acc, category) => {
       acc[category] = false;
       return acc;
     }, {}),
     copied: false,
-    copiedTimer: null
+    copiedTimer: null,
   }
 }
 
@@ -32,9 +30,8 @@ const TagsReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_TAG:
       let { text } = action;
-      if (!text) {
+      if (!text)
         return state;
-      }
       return [ ...state, { id: state.length + 1, text } ];
     case DELETE_TAG:
       return state.filter((tag, i) => i !== action.i);
@@ -74,7 +71,7 @@ const RootReducer = (state = getInitialState(), action) => {
         ],
         addedCategories: {
           ...state.addedCategories,
-          [id]: true
+          [id]: true,
         }
       }
     case COPY_TAGS:
@@ -82,7 +79,7 @@ const RootReducer = (state = getInitialState(), action) => {
       return {
         ...state,
         copied: true,
-        copiedTimer: action.copiedTimer
+        copiedTimer: action.copiedTimer,
       }
     case RESET_COPIED:
       return { ...state, copied: false }
