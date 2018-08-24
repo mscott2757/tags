@@ -1,34 +1,34 @@
 
 export const america = {
-  title: 'America',
+  title: 'Locations',
   groups: {
     sf: {
       title: 'San Francisco',
-      tags: ['sanfrancisco', 'california', 'bayarea']
-    },
-    pdx: {
-      title: 'Portland',
-      tags: ['portland', 'pdx', 'oregon', 'pnw']
-    },
-    oak: {
-      title: 'Oakland',
-      tags: ['oakland', 'california', 'bayarea']
-    },
-    berkeley: {
-      title: 'Berkeley',
-      tags: ['berkeley', 'berkeleypov', 'california']
+      tags: ['sanfrancisco', 'california'],
     },
     la: {
       title: 'Los Angeles',
-      tags: ['losangeles', 'california']
+      tags: ['losangeles', 'california'],
+    },
+    pdx: {
+      title: 'Portland',
+      tags: ['portland', 'pdx', 'oregon', 'pnw'],
+    },
+    oak: {
+      title: 'Oakland',
+      tags: ['oakland', 'california'],
+    },
+    berkeley: {
+      title: 'Berkeley',
+      tags: ['berkeley', 'berkeleypov', 'california'],
     },
     nyc: {
       title: 'New York',
-      tags: ['newyorkcity', 'manhattan', 'ny']
+      tags: ['newyorkcity', 'ny'],
     },
     chicago: {
       title: 'Chicago',
-      tags: ['chicago', 'artofchi', 'illinois']
+      tags: ['chicago', 'illinois'],
     },
   }
 }

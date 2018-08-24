@@ -3,15 +3,15 @@ const cameras = {
   groups: {
     m2: {
       title: 'Leica M2',
-      tags: ['leica', 'leicam', '35mm', '35mmfilm']
+      tags: ['leica', '35mm', '35mmfilm']
     },
     p67: {
       title: 'Pentax 67',
-      tags: ['pentax67', 'pentax', '120mm', 'mediumformat']
+      tags: ['pentax', '120mm', 'mediumformat']
     },
     fm2: {
       title: 'Nikon FM2',
-      tags: ['nikonphotograpy', '35mm', '35mmfilm']
+      tags: ['35mm', '35mmfilm']
     }
   }
 }

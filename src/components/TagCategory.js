@@ -22,7 +22,6 @@ class TagCategory extends Component {
   render() {
     const { groups, added } = this.props;
     let confirmation = added ? <span className='alert-msg'>done</span> : null;
-
     let previewTags = this.props.onFetchPreview(this.props.id, this.state.groupId);
     return (
       <div className='tag-category'>

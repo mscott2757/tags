@@ -1,6 +1,6 @@
 import { colorFilms, bwFilms } from './Films';
 import cameras from './Cameras';
-import { america, asia } from './Locations';
+import { america } from './Locations';
 
 export const defaultTags = [
   'film',
@@ -17,10 +17,13 @@ export const defaultTags = [
   'streetphotography',
   'filmcamera',
   'staybrokeshootfilm',
-  'stayandwander',
   'magnumphotos',
-  'lensculture',
-  'streetclassics'
+  'streetclassics',
+	'filmphotographic',
+	'theanalogclub',
+	'grainisgood',
+	'kodak_photo',
+	'filmforever',
 ];
 
 export const categories = {
@@ -28,6 +31,5 @@ export const categories = {
   colorFilms,
   bwFilms,
   america,
-  asia
 }
 
