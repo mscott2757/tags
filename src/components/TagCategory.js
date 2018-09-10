@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import TagCategoryPreview from './TagCategoryPreview';
 
-class TagCategory extends Component {
+export class TagCategory extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       groupId: '0',
     }
@@ -26,11 +25,11 @@ class TagCategory extends Component {
     return (
       <div className='tag-category'>
         <form onSubmit={this.handleSubmit}>
+          <div className='tag-category__title'>
+            <p>{this.props.title}</p>
+          </div>
           <div className='tag-category__form'>
             <div className='tag-category__left'>
-              <div className='tag-category__title'>
-                <p>{this.props.title}</p>
-              </div>
               <select
                 value={this.state.groupId}
                 onChange={this.handleChange}
@@ -64,5 +63,3 @@ class TagCategory extends Component {
     );
   }
 }
-
-export default TagCategory;

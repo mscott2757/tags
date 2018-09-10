@@ -47,13 +47,19 @@
     justify-content: flex-end; }
 
 .tag-categories {
-  margin-bottom: 50px; }
+  margin-bottom: 25px; }
   .tag-categories .tag-category {
     margin-bottom: 25px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 25px; }
     .tag-categories .tag-category:last-child {
       margin-bottom: 0; }
+    .tag-categories .tag-category .tag-category__title {
+      margin-bottom: 12px; }
+      .tag-categories .tag-category .tag-category__title p {
+        font-weight: bold;
+        margin: 0;
+        text-transform: uppercase; }
     .tag-categories .tag-category .tag-category__form {
       display: flex;
       justify-content: space-between; }
@@ -61,14 +67,6 @@
         display: flex; }
       .tag-categories .tag-category .tag-category__form .tag-category__left {
         display: flex; }
-        .tag-categories .tag-category .tag-category__form .tag-category__left .tag-category__title {
-          width: 70px;
-          margin-right: 10px;
-          display: flex; }
-          .tag-categories .tag-category .tag-category__form .tag-category__left .tag-category__title p {
-            font-weight: bold;
-            margin: 0;
-            align-self: center; }
         .tag-categories .tag-category .tag-category__form .tag-category__left .tag-category__select {
           border: 1px solid #ddd;
           border-radius: 2px;
@@ -96,12 +94,11 @@
     .tag-category-preview li:last-child {
       margin-right: 0; }
 
-@font-face (Futura, fonts/Futura);
 * {
   box-sizing: border-box; }
 
 .app-container {
-  font-family: helvetica, Futura;
+  font-family: helvetica;
   display: flex;
   justify-content: center; }
   .app-container .app {
@@ -109,12 +106,6 @@
     font-size: 12px;
     width: 100vw;
     max-width: 500px; }
-    .app-container .app .app-title {
-      margin-top: 10px;
-      margin-bottom: 40px; }
-      .app-container .app .app-title h3 {
-        margin: 0;
-        font-size: 2.4em; }
     .app-container .app .alert-msg {
       color: #a8a8a8;
       font-size: 12px;

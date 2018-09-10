@@ -1,6 +1,6 @@
 
 .tag-categories {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 
   .tag-category {
     margin-bottom: 25px;
@@ -9,6 +9,16 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    .tag-category__title {
+       margin-bottom: 12px;
+
+       p {
+         font-weight: bold;
+         margin: 0;
+         text-transform: uppercase;
+       }
     }
 
     .tag-category__form {
@@ -21,17 +31,6 @@
       .tag-category__left {
         display: flex;
 
-        .tag-category__title {
-           width: 70px;
-           margin-right: 10px;
-           display: flex;
-
-           p {
-             font-weight: bold;
-             margin: 0;
-             align-self: center;
-           }
-        }
 
         .tag-category__select {
           border: 1px solid #ddd;
