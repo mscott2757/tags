@@ -27,9 +27,7 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-const TagCategoryContainer = connect(
+export const TagCategoryContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(TagCategory);
-
-export default TagCategoryContainer;

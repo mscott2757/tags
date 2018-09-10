@@ -8,7 +8,7 @@ import Tags from './reducers';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-let store = createStore(Tags);
+const store = createStore(Tags);
 
 ReactDOM.render(
   <Provider store={store}>

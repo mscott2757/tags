@@ -13,18 +13,16 @@ import {
   categories,
 } from './content/';
 
-const getInitialState = () => {
-  return {
-    tags: defaultTags.map((text, index) => ({ id: index + 1, text })),
-    categories,
-    addedCategories: Object.keys(categories).reduce((acc, category) => {
-      acc[category] = false;
-      return acc;
-    }, {}),
-    copied: false,
-    copiedTimer: null,
-  }
-}
+const getInitialState = () => ({
+  tags: defaultTags.map((text, index) => ({ id: index + 1, text })),
+  categories,
+  addedCategories: Object.keys(categories).reduce((acc, category) => {
+    acc[category] = false;
+    return acc;
+  }, {}),
+  copied: false,
+  copiedTimer: null,
+});
 
 const TagsReducer = (state = [], action) => {
   switch (action.type) {
