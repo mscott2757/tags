@@ -98,7 +98,7 @@
   box-sizing: border-box; }
 
 .app-container {
-  font-family: helvetica;
+  font-family: 'Roboto', helvetica;
   display: flex;
   justify-content: center; }
   .app-container .app {
