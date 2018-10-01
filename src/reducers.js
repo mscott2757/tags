@@ -2,7 +2,6 @@ import {
   ADD_TAG,
   DELETE_TAG,
   REORDER_TAG,
-  ADD_GROUP,
   COPY_TAGS,
   RESET_COPIED,
   RESET_TAGS,
@@ -11,17 +10,11 @@ import {
 
 import {
   defaultTags,
-  categories,
   flatGroups,
 } from './content/';
 
 const getInitialState = () => ({
   tags: defaultTags.map((text, index) => ({ id: index + 1, text })),
-  categories,
-  addedCategories: Object.keys(categories).reduce((acc, category) => {
-    acc[category] = false;
-    return acc;
-  }, {}),
   copied: false,
   copiedTimer: null,
   groups: Object.keys(flatGroups).map(id => ({ id, ...flatGroups[id] })),
@@ -58,23 +51,6 @@ const RootReducer = (state = getInitialState(), action) => {
       return getInitialState();
     case REORDER_TAG:
       return { ...state, tags: TagsReducer(tags, action) }
-    case ADD_GROUP:
-      let { id, groupId } = action;
-      let category = state.categories[id];
-      let selectedGroup = category.groups[groupId]
-      return {
-        ...state,
-        tags: [
-          ...tags,
-          ...selectedGroup.tags.map((text, index) => {
-            return { id: tags.length + 1 + index, text }
-          })
-        ],
-        addedCategories: {
-          ...state.addedCategories,
-          [id]: true,
-        }
-      }
     case ADD_TAGS:
       return {
         ...state,

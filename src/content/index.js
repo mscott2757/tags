@@ -1,6 +1,6 @@
-import { colorFilms, bwFilms } from './Films';
-import { cameras } from './Cameras';
-import { america } from './Locations';
+import { colorFilms, bwFilms } from './films';
+import { cameras } from './cameras';
+import { america } from './locations';
 
 export const defaultTags = [
   'film',
@@ -26,18 +26,9 @@ export const defaultTags = [
 	'filmforever',
 ];
 
-export const categories = {
-  cameras,
-  colorFilms,
-  bwFilms,
-  america,
-}
-
 export const flatGroups = {
   ...cameras.groups,
   ...colorFilms.groups,
   ...bwFilms.groups,
   ...america.groups,
-}
-
-console.log(flatGroups);
+};

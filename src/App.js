@@ -1,14 +1,13 @@
 import React from 'react';
 import './styles/css/App.css';
-import { TagsOutputContainer, TagsContainer } from './containers/';
-import { TagSearch } from './components';
+import { TagSearch, Tags, TagsOutput } from './components';
 
 const App = () => (
   <div className='app-container'>
     <div className='app'>
       <TagSearch />
-      <TagsContainer />
-      <TagsOutputContainer />
+      <Tags />
+      <TagsOutput />
     </div>
   </div>
 );
