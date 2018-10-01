@@ -5,12 +5,14 @@ import {
   ADD_GROUP,
   COPY_TAGS,
   RESET_COPIED,
-  RESET_TAGS
+  RESET_TAGS,
+  ADD_TAGS,
 } from './actions';
 
 import {
   defaultTags,
   categories,
+  flatGroups,
 } from './content/';
 
 const getInitialState = () => ({
@@ -22,6 +24,7 @@ const getInitialState = () => ({
   }, {}),
   copied: false,
   copiedTimer: null,
+  groups: Object.keys(flatGroups).map(id => ({ id, ...flatGroups[id] })),
 });
 
 const TagsReducer = (state = [], action) => {
@@ -72,6 +75,16 @@ const RootReducer = (state = getInitialState(), action) => {
           [id]: true,
         }
       }
+    case ADD_TAGS:
+      return {
+        ...state,
+        tags: [
+          ...tags,
+          ...action.tags.map((text, index) => {
+            return { id: tags.length + 1 + index, text }
+          }),
+        ],
+      };
     case COPY_TAGS:
       clearTimeout(state.copiedTimer);
       return {

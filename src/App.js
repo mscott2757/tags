@@ -1,17 +1,16 @@
 import React from 'react';
 import './styles/css/App.css';
-import { TagCategoriesContainer, TagsOutputContainer, TagsContainer } from './containers/';
+import { TagsOutputContainer, TagsContainer } from './containers/';
+import { TagSearch } from './components';
 
-const App = () => {
-  return (
-    <div className='app-container'>
-      <div className='app'>
-        <TagCategoriesContainer />
-        <TagsContainer />
-        <TagsOutputContainer />
-      </div>
+const App = () => (
+  <div className='app-container'>
+    <div className='app'>
+      <TagSearch />
+      <TagsContainer />
+      <TagsOutputContainer />
     </div>
-  )
-}
+  </div>
+);
 
 export default App;

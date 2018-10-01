@@ -1,5 +1,5 @@
 import { colorFilms, bwFilms } from './Films';
-import cameras from './Cameras';
+import { cameras } from './Cameras';
 import { america } from './Locations';
 
 export const defaultTags = [
@@ -33,3 +33,11 @@ export const categories = {
   america,
 }
 
+export const flatGroups = {
+  ...cameras.groups,
+  ...colorFilms.groups,
+  ...bwFilms.groups,
+  ...america.groups,
+}
+
+console.log(flatGroups);

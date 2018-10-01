@@ -5,6 +5,7 @@ export const ADD_GROUP = 'ADD_GROUP';
 export const COPY_TAGS = 'COPY_TAGS';
 export const RESET_COPIED = 'RESET_COPIED';
 export const RESET_TAGS = 'RESET_TAGS';
+export const ADD_TAGS = 'ADD_TAGS';
 
 export const deleteTag = i => ({ type: DELETE_TAG, i });
 
@@ -18,6 +19,11 @@ export const reorderTag = (tag, currPos, newPos) => ({
   tag,
   currPos,
   newPos
+});
+
+export const addTags = tags => ({
+  type: ADD_TAGS,
+  tags,
 });
 
 export const resetTags = () => ({ type: RESET_TAGS });

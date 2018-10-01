@@ -1,10 +1,13 @@
-
 export const america = {
   title: 'Locations',
   groups: {
     sf: {
       title: 'San Francisco',
       tags: ['sanfrancisco', 'california'],
+    },
+    bos: {
+      title: 'Boston',
+      tags: ['boston', 'massachusetts'],
     },
     la: {
       title: 'Los Angeles',
