@@ -10,14 +10,14 @@ import {
 
 import {
   defaultTags,
-  flatGroups,
+  groups,
 } from './content/';
 
 const getInitialState = () => ({
   tags: defaultTags.map((text, index) => ({ id: index + 1, text })),
   copied: false,
   copiedTimer: null,
-  groups: Object.keys(flatGroups).map(id => ({ id, ...flatGroups[id] })),
+  groups: Object.keys(groups).map(id => ({ id, ...groups[id] })),
 });
 
 const TagsReducer = (state = [], action) => {
@@ -38,7 +38,7 @@ const TagsReducer = (state = [], action) => {
     default:
       return state;
   }
-}
+};
 
 const RootReducer = (state = getInitialState(), action) => {
   let { tags } = state;
@@ -73,6 +73,6 @@ const RootReducer = (state = getInitialState(), action) => {
     default:
       return state;
   }
-}
+};
 
 export default RootReducer;

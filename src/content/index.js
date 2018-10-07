@@ -26,9 +26,9 @@ export const defaultTags = [
 	'filmforever',
 ];
 
-export const flatGroups = {
-  ...cameras.groups,
-  ...colorFilms.groups,
-  ...bwFilms.groups,
-  ...america.groups,
+export const groups = {
+  ...cameras,
+  ...colorFilms,
+  ...bwFilms,
+  ...america,
 };
