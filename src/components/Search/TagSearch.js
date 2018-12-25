@@ -8,8 +8,16 @@ const SearchContainer = Container.extend`
   position: relative;
 `;
 
+const withVisibility = withStateHandlers(
+  { visible: false },
+  {
+    onToggle: ({ visible }) => () => ({ visible: !visible }),
+  }
+);
+
 const enhance = compose(
   connect(({ groups }) => ({ groups })),
+  withVisibility,
   withStateHandlers(
     { searchTag: '' },
     {
@@ -37,10 +45,10 @@ const Search = ({
       placeholder="Search for tags"
       value={searchTag}
       onChange={setSearchTag}
+      onFoc
     />
     <SearchResults matchingGroups={matchingGroups} />
   </SearchContainer>
 )
-
 
 export const TagSearch = enhance(Search);
