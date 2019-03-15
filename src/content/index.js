@@ -1,6 +1,6 @@
 import { colorFilms, bwFilms } from './films';
 import { cameras } from './cameras';
-import { america } from './locations';
+import { america, asia } from './locations';
 
 export const defaultTags = [
   'film',
@@ -29,4 +29,5 @@ export const groups = {
   ...colorFilms,
   ...bwFilms,
   ...america,
+  ...asia,
 };

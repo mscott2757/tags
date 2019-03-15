@@ -34,6 +34,10 @@ export const america = {
 };
 
 export const asia = {
+  hongkong: {
+    title: 'Hong Kong',
+    tags: ['hongkong', 'hk']
+  },
   tokyo: {
     title: 'Tokyo',
     tags: ['tokyo', 'unknownjapan', 'explorejapan', 'japan']

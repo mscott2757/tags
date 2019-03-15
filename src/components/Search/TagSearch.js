@@ -34,21 +34,29 @@ const enhance = compose(
   }),
 );
 
-const Search = ({
-  setSearchTag,
-  searchTag,
-  matchingGroups,
-}) => (
-  <SearchContainer flexColumn mb="30" >
-    <Input
-      type="text"
-      placeholder="Search for tags"
-      value={searchTag}
-      onChange={setSearchTag}
-      onFoc
-    />
-    <SearchResults matchingGroups={matchingGroups} />
-  </SearchContainer>
-)
+class Search extends React.Component {
+  focusTextInput = () => {
+    if (this.textInput) this.textInput.focus();
+  }
+
+  render() {
+    const { setSearchTag, searchTag, matchingGroups } = this.props;
+    return (
+      <SearchContainer flexColumn mb="30" >
+        <Input
+          type="text"
+          placeholder="Search for tags"
+          value={searchTag}
+          onChange={setSearchTag}
+          innerRef={c => this.textInput = c}
+        />
+        <SearchResults
+          focusTextInput={this.focusTextInput}
+          matchingGroups={matchingGroups}
+        />
+      </SearchContainer>
+    );
+  }
+}
 
 export const TagSearch = enhance(Search);
