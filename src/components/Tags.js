@@ -13,7 +13,7 @@ export const Tags = connect(
       dispatch(deleteTag(i));
     },
     handleAddition: text => {
-      dispatch(addTag(text));
+      dispatch(addTag({ text }));
     },
     handleDrag: (tag, currPos, newPos) => {
       dispatch(reorderTag(tag, currPos, newPos));

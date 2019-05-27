@@ -21,7 +21,7 @@ const enhance= compose(
   ),
   withHandlers({
     handleAddTags: ({ addTags, focusTextInput }) => tags => {
-      addTags(tags);
+      addTags({ tags });
       focusTextInput();
     }
   }),

@@ -5,12 +5,18 @@ export const COPY_TAGS = 'COPY_TAGS';
 export const RESET_COPIED = 'RESET_COPIED';
 export const RESET_TAGS = 'RESET_TAGS';
 export const ADD_TAGS = 'ADD_TAGS';
+export const CLEAR_SUCCESS = 'CLEAR_SUCCESS';
 
 export const deleteTag = i => ({ type: DELETE_TAG, i });
 
-export const addTag = text => ({
+export const insertTag = ({ text, showSuccess }) => ({
   type: ADD_TAG,
-  text: text.replace(/ /g, '').toLowerCase()
+  text: text.replace(/ /g, '').toLowerCase(),
+  showSuccess,
+});
+
+export const clearSuccess = () => ({
+  type: CLEAR_SUCCESS,
 });
 
 export const reorderTag = (tag, currPos, newPos) => ({
@@ -20,10 +26,24 @@ export const reorderTag = (tag, currPos, newPos) => ({
   newPos
 });
 
-export const addTags = tags => ({
+export const insertTags = ({ tags, showSuccess }) => ({
   type: ADD_TAGS,
+  showSuccess,
   tags,
 });
+
+const delay = duration => new Promise(resolve => {
+  setTimeout(resolve, duration);
+});
+
+const actionWithSuccess = action => data => async dispatch => {
+  dispatch(action({ ...data, showSuccess: true }));
+  await delay(1200);
+  dispatch(clearSuccess());
+}
+
+export const addTag = actionWithSuccess(insertTag);
+export const addTags = actionWithSuccess(insertTags);
 
 export const resetTags = () => ({ type: RESET_TAGS });
 

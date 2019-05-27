@@ -6,6 +6,7 @@ import {
   RESET_COPIED,
   RESET_TAGS,
   ADD_TAGS,
+  CLEAR_SUCCESS,
 } from './actions';
 
 import {
@@ -17,6 +18,7 @@ const getInitialState = () => ({
   tags: defaultTags.map((text, index) => ({ id: index + 1, text })),
   copied: false,
   copiedTimer: null,
+  showSuccess: false,
   groups: Object.keys(groups).map(id => ({ id, ...groups[id] })),
 });
 
@@ -43,8 +45,10 @@ const TagsReducer = (state = [], action) => {
 const RootReducer = (state = getInitialState(), action) => {
   let { tags } = state;
   switch (action.type) {
+    case CLEAR_SUCCESS:
+      return { ...state, showSuccess: false };
     case ADD_TAG:
-      return { ...state, tags: TagsReducer(tags, action) }
+      return { ...state, tags: TagsReducer(tags, action), showSuccess: action.showSuccess }
     case DELETE_TAG:
       return { ...state, tags: TagsReducer(tags, action) }
     case RESET_TAGS:
@@ -54,11 +58,10 @@ const RootReducer = (state = getInitialState(), action) => {
     case ADD_TAGS:
       return {
         ...state,
+        showSuccess: action.showSuccess,
         tags: [
           ...tags,
-          ...action.tags.map((text, index) => {
-            return { id: tags.length + 1 + index, text }
-          }),
+          ...action.tags.map((text, index) => ({ id: tags.length + 1 + index, text })),
         ],
       };
     case COPY_TAGS:

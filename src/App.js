@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/css/App.css';
-import { TagSearch, Tags, TagsOutput } from './components';
+import { TagSearch, Tags, TagsOutput, Notification } from './components';
 
 const App = () => (
   <div className='app-container'>
@@ -8,6 +8,7 @@ const App = () => (
       <TagSearch />
       <Tags />
       <TagsOutput />
+      <Notification />
     </div>
   </div>
 );
