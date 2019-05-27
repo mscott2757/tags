@@ -17,7 +17,7 @@ const enhance = compose(
 const FixedContainer = styled.div`
   position: fixed;
   left: 0;
-  bottom: 0;
+  top: 0;
   background-color: rgba(0, 0, 0, 0.85);
   width: 100vw;
   padding: 15px;

@@ -103,6 +103,7 @@
   justify-content: center; }
   .app-container .app {
     padding: 15px;
+    padding-top: 59px;
     font-size: 12px;
     width: 100vw;
     max-width: 500px; }
