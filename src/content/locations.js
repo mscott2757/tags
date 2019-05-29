@@ -25,7 +25,7 @@ export const america = {
   },
   nyc: {
     title: 'New York',
-    tags: ['newyorkcity', 'ny'],
+    tags: ['newyorky', 'nyc'],
   },
   chicago: {
     title: 'Chicago',

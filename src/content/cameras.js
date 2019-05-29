@@ -1,7 +1,7 @@
 export const cameras = {
   m2: {
     title: 'Leica M2',
-    tags: ['leica', '35mm', '35mmfilm'],
+    tags: ['leica', '35mm', 'leicacamera'],
   },
   p67: {
     title: 'Pentax 67',
@@ -11,8 +11,8 @@ export const cameras = {
     title: 'Mamiya 6',
     tags: ['mamiya', '120mm', 'mediumformat'],
   },
-  fm2: {
-    title: 'Nikon FM2',
-    tags: ['35mm', '35mmfilm'],
-  },
+  contaxt2: {
+    title: "Contax T2",
+    tags: ['contax', 'contaxt2', '35mmfilm'],
+  }
 };
