@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/css/App.css';
+import './styles/App.scss';
 import { TagSearch, Tags, TagsOutput, Notification } from './components';
 
 const App = () => (
