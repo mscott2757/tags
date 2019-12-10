@@ -3,27 +3,22 @@ import { cameras } from './cameras';
 import { america, asia } from './locations';
 
 export const defaultTags = [
-  'shootfilm',
-  'everybodyfilm',
+  'ishootfilm',
   'filmisnotdead',
   'filmcamera',
   'filmcommunity',
   'filmfeed',
   'analogfeatures',
-  'analoguevibes',
-  'drivebyfilm',
-  'filmphotomag',
-	'afilmcosmos',
 	'analog',
 	'analogue',
 	'filmforever',
-  'filmwave',
   'grainisgood',
-  '35mmmagazine',
   'onfilm',
   'back2thebase',
   'photofilmy',
-  'taintedmag',
+  'filmphotographic',
+  'ifyouleave',
+  'collectivelycreate',
 ];
 
 export const groups = {

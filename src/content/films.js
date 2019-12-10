@@ -1,5 +1,5 @@
 
-const portraTags = ['kodakfilm', 'portra400', 'madewithkodak'];
+const portraTags = ['portra', 'kodakportra', 'kodak'];
 const fujiTags = ['ishootfujifilm'];
 
 export const colorFilms = {

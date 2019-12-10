@@ -1,7 +1,7 @@
 export const america = {
   sf: {
     title: 'San Francisco',
-    tags: ['sanfrancisco', 'california'],
+    tags: ['sanfrancisco', 'sf', 'bayarea'],
   },
   bos: {
     title: 'Boston',
@@ -9,7 +9,7 @@ export const america = {
   },
   la: {
     title: 'Los Angeles',
-    tags: ['losangeles', 'california'],
+    tags: ['losangeles', 'la'],
   },
   pdx: {
     title: 'Portland',
@@ -17,19 +17,19 @@ export const america = {
   },
   oak: {
     title: 'Oakland',
-    tags: ['oakland', 'california'],
+    tags: ['oakland', 'bayarea'],
   },
   berkeley: {
     title: 'Berkeley',
-    tags: ['berkeley', 'berkeleypov', 'california'],
+    tags: ['berkeley', 'berkeleypov'],
   },
   nyc: {
     title: 'New York',
-    tags: ['newyorky', 'nyc'],
+    tags: ['newyorkcity', 'manhattan'],
   },
   chicago: {
     title: 'Chicago',
-    tags: ['chicago', 'illinois'],
+    tags: ['chicago'],
   },
 };
 
@@ -40,15 +40,15 @@ export const asia = {
   },
   tokyo: {
     title: 'Tokyo',
-    tags: ['tokyo', 'unknownjapan', 'explorejapan', 'japan']
+    tags: ['tokyo'],
   },
   osaka: {
     title: 'Osaka',
-    tags: ['osaka', 'unknownjapan', 'explorejapan', 'japan']
+    tags: ['osaka'],
   },
   kyoto: {
     title: 'Kyoto',
-    tags: ['kyoto', 'unknownjapan', 'explorejapan', 'japan']
+    tags: ['kyoto'],
   },
   taipei: {
     title: 'Taipei',
