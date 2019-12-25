@@ -1,7 +1,8 @@
 import * as React from 'react';
+import styled from 'styled-components';
 import { Container, TextNormal } from './../Core';
 
-const TitleText = TextNormal.extend`
+const TitleText = styled(TextNormal)`
   text-decoration: underline;
 `;
 

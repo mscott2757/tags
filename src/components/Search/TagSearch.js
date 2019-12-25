@@ -1,10 +1,11 @@
-import * as React from 'react';
+import React, { useRef } from 'react';
+import styled from 'styled-components';
 import { compose, withStateHandlers, withProps } from 'recompose';
 import { connect } from 'react-redux';
 import { Container, Input } from './../Core';
 import { SearchResults } from './';
 
-const SearchContainer = Container.extend`
+const SearchContainer = styled(Container)`
   position: relative;
 `;
 
@@ -34,29 +35,25 @@ const enhance = compose(
   }),
 );
 
-class Search extends React.Component {
-  focusTextInput = () => {
-    if (this.textInput) this.textInput.focus();
-  }
+const Search = ({ setSearchTag, searchTag, matchingGroups }) => {
+  const inputRef = useRef(null);
+  const focusTextInput = () => inputRef.current.focus();
 
-  render() {
-    const { setSearchTag, searchTag, matchingGroups } = this.props;
-    return (
-      <SearchContainer flexColumn mb="30" >
-        <Input
-          type="text"
-          placeholder="Search for tags"
-          value={searchTag}
-          onChange={setSearchTag}
-          innerRef={c => this.textInput = c}
-        />
-        <SearchResults
-          focusTextInput={this.focusTextInput}
-          matchingGroups={matchingGroups}
-        />
-      </SearchContainer>
-    );
-  }
-}
+  return (
+    <SearchContainer flexColumn mb="30" >
+      <Input
+        type="text"
+        placeholder="Search for tags"
+        value={searchTag}
+        onChange={setSearchTag}
+        ref={inputRef}
+      />
+      <SearchResults
+        focusTextInput={focusTextInput}
+        matchingGroups={matchingGroups}
+      />
+    </SearchContainer>
+  );
+};
 
 export const TagSearch = enhance(Search);

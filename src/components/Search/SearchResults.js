@@ -35,7 +35,7 @@ const ResultWrapper = styled.div`
   background: #fff;
 `;
 
-const ResultContainer = Container.extend`
+const ResultContainer = styled(Container)`
   border-radius: 2px;
   border: 1px solid #ddd;
   border-top: none;

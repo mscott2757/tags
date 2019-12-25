@@ -5,6 +5,6 @@ const BaseText = styled.p`
   padding: 0;
 `;
 
-export const TextNormal = BaseText.extend`
+export const TextNormal = styled(BaseText)`
   font-size: 12px;
 `;
