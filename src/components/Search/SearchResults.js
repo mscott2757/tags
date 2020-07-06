@@ -30,9 +30,10 @@ const enhance= compose(
 const ResultWrapper = styled.div`
   position: absolute;
   width: 100%;
-  top: 31px;
+  top: 44px;
   z-index: 100;
   background: #fff;
+  ${({ visible }) => !visible && 'display: none'};
 `;
 
 const ResultContainer = styled(Container)`
@@ -41,9 +42,9 @@ const ResultContainer = styled(Container)`
   border-top: none;
 `;
 
-const Results = ({ matchingGroups, handleAddTags }) => (
-  <ResultWrapper>
-    <ResultContainer p="8" flexColumn>
+const Results = ({ visible, matchingGroups, handleAddTags }) => (
+  <ResultWrapper visible={visible}>
+    <ResultContainer flexColumn>
       {matchingGroups.map(({ id, tags, ...group })=> (
         <SearchResult
           key={id}

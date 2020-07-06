@@ -7,7 +7,7 @@ const TitleText = styled(TextNormal)`
 `;
 
 export const SearchResult = ({ title, ...rest }) => (
-  <Container py="12" {...rest}>
+  <Container px="16" py="20" {...rest}>
     <TitleText>{title}</TitleText>
   </Container>
 );

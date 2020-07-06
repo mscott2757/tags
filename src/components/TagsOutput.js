@@ -1,7 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
 import { compose, withProps } from 'recompose';
 import { connect } from 'react-redux';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Button } from './Core';
 import { formatTags } from './../helpers';
 import { resetCopied, copyTags, resetTags } from './../actions';
 
@@ -27,6 +29,13 @@ const enhance = compose(
   })),
 );
 
+const TagButton = styled(Button)`
+  margin-right: 8px;
+  &:last-child {
+    margin-right: 0;
+  }
+`;
+
 const Output = ({
   copied,
   tooLong,
@@ -51,9 +60,9 @@ const Output = ({
           text={tagsDisplay}
           onCopy={onCopy}
         >
-          <button className={'tag-btn ' + (tooLong ? 'tag-btn--disabled' : '')}>Copy</button>
+          <TagButton disabled={tooLong}>Copy</TagButton>
         </CopyToClipboard>
-        <button onClick={onReset} className={'tag-btn'}>Reset</button>
+        <TagButton onClick={onReset} className={'tag-btn'}>Reset</TagButton>
       </div>
     </div>
   );
