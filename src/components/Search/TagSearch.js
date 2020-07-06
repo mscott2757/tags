@@ -37,8 +37,8 @@ const useOutside = (ref, cb) => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
-    }
-  }, [ref])
+    };
+  }, [ref, cb])
 }
 
 const Search = ({ setSearchTag, searchTag, matchingGroups }) => {

@@ -5,7 +5,7 @@
   "dependencies": {
     "node-sass": "^4.13.0",
     "npm": "^6.13.3",
-    "react": "^16.12.0",
+    "react": "^16.13.1",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.12.0",
     "react-redux": "^5.1.2",
@@ -14,7 +14,7 @@
     "recompose": "^0.30.0",
     "redux": "^3.7.2",
     "redux-thunk": "^2.3.0",
-    "styled-components": "^4.4.1"
+    "styled-components": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
