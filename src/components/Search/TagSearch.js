@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 import { compose, withStateHandlers, withProps } from 'recompose';
 import { connect } from 'react-redux';
@@ -9,16 +9,8 @@ const SearchContainer = styled(Container)`
   position: relative;
 `;
 
-const withVisibility = withStateHandlers(
-  { visible: false },
-  {
-    onToggle: ({ visible }) => () => ({ visible: !visible }),
-  }
-);
-
 const enhance = compose(
   connect(({ groups }) => ({ groups })),
-  withVisibility,
   withStateHandlers(
     { searchTag: '' },
     {
@@ -35,20 +27,43 @@ const enhance = compose(
   }),
 );
 
+const useOutside = (ref, cb) => {
+  useEffect(() => {
+    const handleClickOutside = event => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        cb();
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+  }, [ref])
+}
+
 const Search = ({ setSearchTag, searchTag, matchingGroups }) => {
   const inputRef = useRef(null);
+  const wrapperRef = useRef(null);
   const focusTextInput = () => inputRef.current.focus();
+  const [visible, setVisibility] = useState(false);
+  useOutside(wrapperRef, () => {
+    setVisibility(false);
+  });
 
   return (
-    <SearchContainer flexColumn mb="30" >
+    <SearchContainer ref={wrapperRef} flexColumn mb="30" >
       <Input
         type="text"
         placeholder="Search for tags"
         value={searchTag}
         onChange={setSearchTag}
+        onFocus={() => {
+          setVisibility(true);
+        }}
         ref={inputRef}
       />
       <SearchResults
+        visible={visible}
         focusTextInput={focusTextInput}
         matchingGroups={matchingGroups}
       />
