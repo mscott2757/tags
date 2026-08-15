@@ -16,9 +16,12 @@
       }
 
       .ReactTags__remove {
-        color: #aaa;
         margin-left: 5px;
         cursor: pointer;
+
+        svg {
+          fill: #aaa;
+        }
       }
     }
 
