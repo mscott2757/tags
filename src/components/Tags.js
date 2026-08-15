@@ -8,7 +8,7 @@ import {
 } from '../actions';
 
 export const Tags = compose(
-  withProps(() => ({ autofocus: false })),
+  withProps(() => ({ autoFocus: false })),
   connect(
     ({ tags }) => ({ tags }),
     dispatch => ({

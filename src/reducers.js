@@ -15,7 +15,7 @@ import {
 } from './content/';
 
 const getInitialState = () => ({
-  tags: defaultTags.map((text, index) => ({ id: index + 1, text })),
+  tags: defaultTags.map((text, index) => ({ id: text, text })),
   copied: false,
   copiedTimer: null,
   showSuccess: false,
@@ -61,7 +61,7 @@ const RootReducer = (state = getInitialState(), action) => {
         showSuccess: action.showSuccess,
         tags: [
           ...tags,
-          ...action.tags.map((text, index) => ({ id: tags.length + 1 + index, text })),
+          ...action.tags.map((text, index) => ({ id: text, text })),
         ],
       };
     case COPY_TAGS:
