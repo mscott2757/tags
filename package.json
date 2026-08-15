@@ -20,7 +20,7 @@
 		"dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "serve -s dist",
+    "start": "serve dist",
     "heroku-postbuild": "npm run build"
   },
   "browserslist": {
