@@ -1,7 +1,7 @@
 export const america = {
   sf: {
     title: 'San Francisco',
-    tags: ['baeareafilm', 'sanfrancisco', 'sf', 'bayarea'],
+    tags: ['sanfrancisco'],
   },
   bos: {
     title: 'Boston',
@@ -25,7 +25,11 @@ export const america = {
   },
   nyc: {
     title: 'New York',
-    tags: ['newyorkcity', 'manhattan'],
+    tags: ['nyc'],
+  },
+  brooklyn: {
+    title: 'Brooklyn',
+    tags: ['nyc', 'brooklyn'],
   },
   chicago: {
     title: 'Chicago',
