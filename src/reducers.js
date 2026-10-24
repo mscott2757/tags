@@ -28,7 +28,7 @@ const TagsReducer = (state = [], action) => {
       let { text } = action;
       if (!text)
         return state;
-      return [ ...state, { id: state.length + 1, text } ];
+      return [ ...state, { id: text, text } ];
     case DELETE_TAG:
       return state.filter((tag, i) => i !== action.i);
     case REORDER_TAG:
