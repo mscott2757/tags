@@ -15,7 +15,7 @@ export const Tags = compose(
       handleDelete: i => {
         dispatch(deleteTag(i));
       },
-      handleAddition: text => {
+      handleAddition: ({ text }) => {
         dispatch(addTag({ text }));
       },
       handleDrag: (tag, currPos, newPos) => {
